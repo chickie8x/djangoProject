@@ -1,13 +1,13 @@
-body{
+body {
     background: burlywood;
     min-height: 100vh;
 }
 
-.qq{
+.qq {
     position: relative;
 }
 
-.navbar{
+.navbar {
     height: 48px;
     width: 100%;
     background: cornflowerblue;
@@ -18,37 +18,100 @@ body{
     z-index: 10000;
 }
 
-.choice{
+.choice {
     display: flex;
     align-items: center;
     width: 330px;
-    justify-content: space-between;
 }
 
-#site-choice{
+#site-choice {
     min-width: 130px;
     margin-right: 12px;
 }
 
-#label-choice{
+#label-choice {
     font-size: 14px;
     color: white;
     margin-left: 12px;
 }
 
-.content-wrapper{
+.content-wrapper {
     margin-top: 50px;
 }
 
-.choosen-items{
-    width: 24px;
-    height: 24px;
-    padding: 4px;
-    border-radius: 4px;
+.items-label {
     margin-left: 24px;
+    font-size: 14px;
+    color: white;
 }
 
-.choosen-items:hover{
+.choosen-items {
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    border-radius: 4px;
+    margin-left: 2px;
+    position: relative;
+}
+
+.choosen-items:hover {
     background: rgba(255, 255, 255, 0.14);
     transition-duration: 0.3s;
+}
+
+#counter {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 0;
+    right: -10px;
+    font-size: 10px;
+    background: red;
+    border: solid white 2px;
+    border-radius: 100px;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#items-list {
+    max-height: 0;
+    overflow: hidden;
+    background: cornflowerblue;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: 500px;
+    border-radius: 8px;
+}
+
+#listqq {
+    list-style: none;
+}
+
+#listqq > li {
+    padding: 8px 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: space-between;
+    background: #86aaec;
+    margin: 8px;
+}
+
+#listqq > li:hover{
+    background: #a2bef3;
+}
+
+.btn-close{
+    margin-left: 24px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.btn-close:hover{
+    color: red;
 }
