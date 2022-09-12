@@ -54,4 +54,7 @@ def crawl(request):
 
 
 def article(request,path):
-    return redirect('https://tuoitre.vn/'+path)
+    if path[0:5] != 'https':
+        return redirect('https://tuoitre.vn/'+path)
+    else:
+        return redirect(path)
