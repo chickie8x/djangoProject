@@ -10,6 +10,7 @@ class Article(models.Model):
     article_desc = models.TextField()
     article_content = models.TextField()
     article_slug = models.SlugField()
+    imgs = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.article_title
@@ -18,9 +19,9 @@ class Article(models.Model):
         self.article_slug = slugify(self.article_title)
         return super(Article, self).save(*args, **kwargs)
 
-class Images(models.Model):
-    article = models.ForeignKey(Article, on_delete= models.CASCADE)
-    img_url = models.CharField(max_length=500)
-
-    def __str__(self):
-        return self.img_url
+# class Images(models.Model):
+#     article = models.ForeignKey(Article, on_delete= models.CASCADE)
+#     img_url = models.CharField(max_length=500)
+#
+#     def __str__(self):
+#         return self.img_url
